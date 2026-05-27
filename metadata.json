@@ -1,0 +1,6 @@
+{
+  "name": "Wayfinder",
+  "description": "Personalized custom travel route planner with live maps, interactive personas, and group tracking.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

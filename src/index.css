@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1D4ED8; /* Adventure Blue (#1D4ED8) */
+  --color-secondary: #F97316; /* Sunrise Orange (#F97316) */
+  --color-secondary-container: #F97316; /* Sunrise Orange */
+  --color-on-secondary-container: #ffffff;
+  --color-tertiary: #10B981; /* Nature Emerald Green */
+  --color-tertiary-container: #34D399;
+  --color-background: #F8FAFC; /* Slate 50 (#F8FAFC) */
+  --color-surface: #F8FAFC; /* Slate 50 */
+  --color-on-surface: #0F172A; /* Slate 900 */
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #F1F5F9; /* Slate 100 */
+  --color-surface-container: #E2E8F0; /* Slate 200 */
+  --color-surface-container-high: #CBD5E1; /* Slate 300 */
+  --color-surface-container-highest: #94A3B8; /* Slate 400 */
+  --color-on-surface-variant: #475569; /* Slate 600 */
+  --color-outline: #64748B; /* Slate 500 */
+  --color-outline-variant: #E2E8F0; /* Slate 200 */
+  --color-error: #EF4444; /* Red 500 */
+  
+  --font-sans: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-display: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Glass effect overlay */
+.glass-effect {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.dark .glass-effect {
+  background: rgba(25, 28, 30, 0.85);
+}
+
+/* Route animations on maps */
+.route-path {
+  stroke-dasharray: 8;
+  animation: dash 30s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+/* Material Symbols alignment style */
+.icon {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+/* Custom scrollbars for sliding cards */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #c3c6d8;
+  border-radius: 99px;
+}
